@@ -15,6 +15,9 @@ const MainStyle = makeStyles(theme => ({
     },
     appBar: {
         backgroundColor: "#9FCC2E"
+    },
+    margin: {
+        margin: theme.spacing(1, 1, 1, 1),
     }
 }))
 

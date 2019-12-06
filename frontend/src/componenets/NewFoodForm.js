@@ -13,65 +13,91 @@ const NewFoodForm = () => {
 
     })
     const handleChange = prop => event => setValues({ ...values, [prop]: event.target.value });
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log("Submitted!")
+        if (!values.foodName) {
+            alert("You gotta enter a food name!");
+        }
+        else {
+            console.log(values)
+        }
+    }
     return (
         <Card className={classes.root}>
-            <CardContent>
-                <Grid container spacing={0}>
-                    <Grid item xs = {12} lg = {5} xl = {6} >
-                        <TextField label="Food Name"
-                            className={classes.foodInput}
-                            value={values.foodName}
-                            onChange={handleChange("foodName")}
-                            fullWidth
-                        />
+            <form action="submit" onSubmit={handleSubmit}>
+                <CardContent>
+                    <Grid container spacing={3} alignContent="center">
+                        <Grid item xs={12} lg={4} xl={4} >
+                            <TextField label="Food Name"
+                                className={classes.foodInput}
+                                value={values.foodName}
+                                onChange={handleChange("foodName")}
+                                fullWidth
+                            // className={classes.margin}
+                            />
+                        </Grid>
+
+                        <Grid item xs={6} md={3} lg={2} >
+                            <TextField label="Calories"
+                                className={classes.foodInput}
+                                type="number"
+                                InputProps={{
+                                    endAdornment: <InputAdornment position="end" >kcal</InputAdornment>
+                                }}
+                                value={values.calories}
+                                onChange={handleChange("calories")}
+                                fullWidth
+                            />
+                        </Grid>
+
+                        <Grid item xs={6} md={3} lg={2}>
+                            <TextField label="Fats"
+                                className={classes.foodInput}
+                                type="number"
+                                InputProps={{
+                                    endAdornment: <InputAdornment position="end" >g</InputAdornment>
+                                }}
+                                value={values.fats}
+                                onChange={handleChange("fats")}
+                                fullWidth
+                            />
+                        </Grid>
+
+                        <Grid item xs={6} md={3} lg={2}>
+                            <TextField label="Carbs"
+                                className={classes.foodInput}
+                                type="number"
+                                InputProps={{
+                                    endAdornment: <InputAdornment position="end" >g</InputAdornment>
+                                }}
+                                value={values.carbs}
+                                onChange={handleChange("carbs")}
+                                fullWidth
+                            />
+                        </Grid>
+
+                        <Grid item xs={6} md={3} lg={2}>
+                            <TextField label="Proteins"
+                                className={classes.foodInput}
+                                type="number"
+                                InputProps={{
+                                    endAdornment: <InputAdornment position="end" >g</InputAdornment>
+                                }}
+                                value={values.protiens}
+                                onChange={handleChange("proteins")}
+                                fullWidth
+                            />
+                        </Grid>
+
                     </Grid>
-                    <TextField label="Calories"
-                        className={classes.foodInput}
-                        type="number"
-                        InputProps={{
-                            endAdornment: <InputAdornment position="end" >kcal</InputAdornment>
-                        }}
-                        value={values.calories}
-                        onChange={handleChange("calories")}
-
-                    />
-                    <TextField label="Fats"
-                        className={classes.foodInput}
-                        type="number"
-                        InputProps={{
-                            endAdornment: <InputAdornment position="end" >g</InputAdornment>
-                        }}
-                        value={values.fats}
-                        onChange={handleChange("fats")}
-
-                    />
-                    <TextField label="Carbs"
-                        className={classes.foodInput}
-                        type="number"
-                        InputProps={{
-                            endAdornment: <InputAdornment position="end" >g</InputAdornment>
-                        }}
-                        value={values.carbs}
-                        onChange={handleChange("carbs")}
-
-                    />
-                    <TextField label="Proteins"
-                        className={classes.foodInput}
-                        type="number"
-                        InputProps={{
-                            endAdornment: <InputAdornment position="end" >g</InputAdornment>
-                        }}
-                        value={values.protiens}
-                        onChange={handleChange("proteins")}
-
-                    />
-            </Grid>
-            </CardContent>
-            <CardActions>
-                <Button fullWidth className={classes.button}>
-                    Submit
-                </Button>
-            </CardActions>
+                </CardContent>
+                <CardActions>
+                    <Button fullWidth className={classes.button} type="submit">
+                        Submit
+                    </Button>
+                </CardActions>
+            </form>
         </Card>
     )
 }
