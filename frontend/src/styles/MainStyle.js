@@ -9,6 +9,7 @@ const MainStyle = makeStyles(theme => ({
     },
     button: {
         backgroundColor: "#9FCC2E",
+        marginTop: theme.spacing(8)
     },
     foodInput: {
         margin: theme.spacing(1,1),

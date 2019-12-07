@@ -22,6 +22,13 @@ const NewFoodForm = props => {
         else {
             console.log(values)
             props.addFood(values);
+            setValues({
+                foodName: "",
+                calories: 0,
+                fats: 0,
+                carbs: 0,
+                proteins: 0,
+            })
         }
     }
     return (

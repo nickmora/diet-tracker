@@ -5,6 +5,7 @@ import TabPanel from "./TabPanel";
 import MainDisplay from "./MainDisplay";
 import NewFoodForm from "./NewFoodForm"
 import data from "../fakedata/foods.json";
+import FoodCard from "./FoodCard";
 
 
 const NavBar = () => {
@@ -14,7 +15,6 @@ const NavBar = () => {
     const addFood = info => data.push(info);
 
     return (
-        console.log(data[0]),
         <div>
             <AppBar className={classes.appBar} position="static">
                 <Tabs variant="fullWidth" value={value} onChange={handleChange}>
@@ -33,13 +33,14 @@ const NavBar = () => {
                 {data.length ?
                     data.map(item => {
                         return (
-                            <div>
-                                <p>{item.foodName}</p>
-                                <p>{item.calories}</p>
-                                <p>{item.fats}</p>
-                                <p>{item.proteins}</p>
-                                <p>{item.carbs}</p>
-                            </div>
+                            <FoodCard 
+                                foodName = {item.foodName}
+                                calories = {item.calories}
+                                fats = {item.fats}
+                                carbs = {item.carbs}
+                                proteins = {item.proteins}
+                                key = {item.foodName}
+                            />
                         )
                     })
                     :

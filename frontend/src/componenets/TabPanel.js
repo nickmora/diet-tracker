@@ -9,11 +9,11 @@ const TabPanel = props=>{
         <Typography
             component = "div"
             role = "tabpanel"
-            hidden = {value != index}
+            hidden = {value !== index}
             id = {`tab-panel-${index}`}
             {...other}
         >
-            {value == index && <div>{children}</div>}
+            {value === index && <div>{children}</div>}
         </Typography>
     )
 }
