@@ -14,11 +14,16 @@ const MainStyle = makeStyles(theme => ({
         margin: theme.spacing(1,1),
     },
     appBar: {
-        backgroundColor: "#9FCC2E"
+        backgroundColor: "#9FCC2E",
+        flexGrow: 1,
     },
     margin: {
         margin: theme.spacing(1, 1, 1, 1),
-    }
+    },
+    standard: {
+        backgroundColor: "#EFE7DA",
+        padding: theme.spacing(3,2)
+    },
 }))
 
 export default MainStyle

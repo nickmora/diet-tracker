@@ -1,0 +1,9 @@
+[
+    {
+        "foodName": "Food One",
+        "calories": "10",
+        "fats": "20",
+        "carbs": "12",
+        "proteins": "40"
+    }
+]

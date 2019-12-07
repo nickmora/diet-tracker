@@ -2,14 +2,14 @@ import React from "react";
 import { TextField, Card, CardContent, InputAdornment, Button, CardActions, Grid } from "@material-ui/core";
 import MainStyle from "../styles/MainStyle";
 
-const NewFoodForm = () => {
+const NewFoodForm = props => {
     const classes = MainStyle();
     const [values, setValues] = React.useState({
         foodName: "",
         calories: 0,
         fats: 0,
         carbs: 0,
-        protiens: 0,
+        proteins: 0,
 
     })
     const handleChange = prop => event => setValues({ ...values, [prop]: event.target.value });
@@ -21,6 +21,7 @@ const NewFoodForm = () => {
         }
         else {
             console.log(values)
+            props.addFood(values);
         }
     }
     return (
@@ -84,7 +85,7 @@ const NewFoodForm = () => {
                                 InputProps={{
                                     endAdornment: <InputAdornment position="end" >g</InputAdornment>
                                 }}
-                                value={values.protiens}
+                                value={values.proteins}
                                 onChange={handleChange("proteins")}
                                 fullWidth
                             />
