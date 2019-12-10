@@ -9,7 +9,7 @@ const MainStyle = makeStyles(theme => ({
     },
     button: {
         backgroundColor: "#9FCC2E",
-        marginTop: theme.spacing(8)
+        color: "#6B6064"
     },
     foodInput: {
         margin: theme.spacing(1,1),
@@ -25,6 +25,13 @@ const MainStyle = makeStyles(theme => ({
         backgroundColor: "#EFE7DA",
         padding: theme.spacing(3,2)
     },
+    deleteButton: {
+        backgroundColor: "#A1B0AB",
+        color: "#6B6064"
+    },
+    gridTop: {
+        marginTop: theme.spacing(8),
+    }
 }))
 
 export default MainStyle

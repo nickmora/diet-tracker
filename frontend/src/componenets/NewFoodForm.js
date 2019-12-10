@@ -36,7 +36,7 @@ const NewFoodForm = props => {
             <form action="submit" onSubmit={handleSubmit}>
                 <CardContent>
                     <Grid container spacing={3} alignContent="center">
-                        <Grid item xs={12} lg={4} xl={4} >
+                        <Grid item xs={12} lg={12} xl={12} >
                             <TextField label="Food Name"
                                 className={classes.foodInput}
                                 value={values.foodName}
@@ -46,7 +46,7 @@ const NewFoodForm = props => {
                             />
                         </Grid>
 
-                        <Grid item xs={6} md={3} lg={2} >
+                        <Grid item xs={6} md={3} lg={3} >
                             <TextField label="Calories"
                                 className={classes.foodInput}
                                 type="number"
@@ -59,7 +59,7 @@ const NewFoodForm = props => {
                             />
                         </Grid>
 
-                        <Grid item xs={6} md={3} lg={2}>
+                        <Grid item xs={6} md={3} lg={3}>
                             <TextField label="Fats"
                                 className={classes.foodInput}
                                 type="number"
@@ -72,7 +72,7 @@ const NewFoodForm = props => {
                             />
                         </Grid>
 
-                        <Grid item xs={6} md={3} lg={2}>
+                        <Grid item xs={6} md={3} lg={3}>
                             <TextField label="Carbs"
                                 className={classes.foodInput}
                                 type="number"
@@ -85,7 +85,7 @@ const NewFoodForm = props => {
                             />
                         </Grid>
 
-                        <Grid item xs={6} md={3} lg={2}>
+                        <Grid item xs={6} md={3} lg={3}>
                             <TextField label="Proteins"
                                 className={classes.foodInput}
                                 type="number"

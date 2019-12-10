@@ -33,13 +33,14 @@ const NavBar = () => {
                 {data.length ?
                     data.map(item => {
                         return (
+                            console.log(item),
                             <FoodCard 
                                 foodName = {item.foodName}
                                 calories = {item.calories}
                                 fats = {item.fats}
                                 carbs = {item.carbs}
                                 proteins = {item.proteins}
-                                key = {item.foodName}
+                                key = {item.key}
                             />
                         )
                     })
